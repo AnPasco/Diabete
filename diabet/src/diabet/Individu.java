@@ -22,6 +22,15 @@ public class Individu {
 		this.numSecu = numSecu;
 	}
 
+	public Individu(String nom, String prenom, Date dateNaissance, Boolean sexe, int numSecu) {
+		super();
+		this.nom = nom;
+		this.prenom = prenom;
+		this.dateNaissance = dateNaissance;
+		this.sexe = sexe;
+		this.numSecu = numSecu;
+	}
+
 	// Getters and Setters
 
 	public int getId() {
@@ -73,8 +82,8 @@ public class Individu {
 	}
 
 	// Méthodes et fonction
-	
-	//Ajout BD
+
+	// Ajout BD
 	public void addIndividu(Individu individu) {
 		String query = "";
 		query += "INSERT INTO Individu (nom, prenom, dateNaissance, sexe, numSecu) VALUES (";
