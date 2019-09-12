@@ -71,9 +71,22 @@ public class Individu {
 	public void setNumSecu(int numSecu) {
 		this.numSecu = numSecu;
 	}
+
+	// Méthodes et fonction
 	
-	//toString
-	
+	//Ajout BD
+	public void addIndividu(Individu individu) {
+		String query = "";
+		query += "INSERT INTO Individu (nom, prenom, dateNaissance, sexe, numSecu) VALUES (";
+		query += "'" + individu.getNom() + "', ";
+		query += "'" + individu.getPrenom() + "', ";
+		query += "'" + individu.getDateNaissance() + "', ";
+		query += individu.getSexe() + ", ";
+		query += individu.getNumSecu() + "' )";
+	}
+
+	// toString
+
 	@Override
 	public String toString() {
 		return "Individu [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", dateNaissance=" + dateNaissance
